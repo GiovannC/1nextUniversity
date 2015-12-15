@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo Objetos</title>
+</head>
+<body>
+	
+	<h1>Objetos</h1>
+
+	<h2>Producto 1</h2>
+
+	<p id="c1"></p>
+	<p id="n1"></p>
+	<p id="p1"></p>
+
+	<h2>Producto 2</h2>
+
+	<p id="c2"></p>
+	<p id="n2"></p>
+	<p id="p2"></p>
+
+	<h2>Producto 3</h2>
+
+	<p id="c3"></p>
+	<p id="n3"></p>
+	<p id="p3"></p>
+
+	<script>
+
+		// ---  Existen tres formas para crear un Objeto: -----
+
+		//1. Lista de pares de valores propiedad/valor
+		var producto1 = {
+			codigo:"0001", 
+			nombre:"Gorra", 
+			precio:5000
+		}
+
+		//2. Usando la palabra reservada new
+		var producto2 = new Object();
+		producto2.codigo = "005";
+		producto2.nombre = "camiseta";
+		producto2.precio = 7000;
+
+		//3. Usando una funcion constructor: con la palabra reservada - this -
+		function producto3(codigo, nombre, precio){
+			this.codigo = codigo; // Despues del igual se usa los nombres del parametro
+			this.nombre = nombre;
+			this.precio = precio;
+		}
+			var producto3 = new producto3("001", "Gorra", 50);
+			
+			
+			//Accediendo a las propiedades de los objetos para mostrarla
+			document.getElementById("c1").innerHTML = producto1.codigo;
+			document.getElementById("n1").innerHTML = producto1.nombre;
+			document.getElementById("p1").innerHTML = producto1.precio;
+
+			document.getElementById("c2").innerHTML = producto2.codigo;
+			document.getElementById("n2").innerHTML = producto2.nombre;
+			document.getElementById("p2").innerHTML = producto2.precio;
+
+			document.getElementById("c3").innerHTML = producto3.codigo;
+			document.getElementById("n3").innerHTML = producto3.nombre;
+			document.getElementById("p3").innerHTML = producto3.precio;	
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Actividad de codigo Objetos y funciones</title>
+</head>
+<body>
+	
+	<h1>Objetos</h1>
+
+		<!-- Primer ejercicio -->
+	
+	<h2>Articulo 1</h2>
+		
+	<p id="codigo"></p>
+	<p id="nombre"></p>
+	<p id="precio"></p>
+
+
+	<h2>Articulos 2</h2>
+
+	<p id="codigo2"></p>
+	<p id="nombre2"></p>
+	<p id="precio2"></p>
+
+	<h2>Articulo 3</h2>
+
+	<p id="codigo3"></p>
+	<p id="nombre3"></p>
+	<p id="precio3"></p>
+
+	<br>
+	<hr>
+	<br>
+
+		<!-- Segundo ejercicio -->
+
+	<h2>Estudiante 1</h2>
+
+	<p id="codigoEstudiante"></p>
+	<p id="nombreEstudiante"></p>
+	<p id="telefonoEstudiante"></p>
+
+	<h2>Estudiante 2</h2>
+
+	<p id="codigoEstudiante2"></p>
+	<p id="nombreEstudiante2"></p>
+	<p id="telefonoEstudiante2"></p>
+
+	<h2>Estudiante 3</h2>
+
+	<p id="codigoEstudiante3"></p>
+	<p id="nombreEstudiante3"></p>
+	<p id="telefonoEstudiante3"></p>
+
+	<br>
+	<hr>
+	<br>
+
+		<!-- tercer ejercicio -->
+
+	<h2>Persona 1</h2>
+
+	<p id="id"></p>
+	<p id="nombre-persona"></p>
+	<p id="edad"></p>
+
+	<h2>Persona 2</h2>
+
+	<p id="id2"></p>
+	<p id="nombre-persona2"></p>
+	<p id="edad2"></p>
+
+	<h2>Persona 3</h2>
+
+	<p id="id3"></p>
+	<p id="nombre-persona3"></p>
+	<p id="edad3"></p>
+
+	<br>
+	<hr>
+	<br>
+
+		<!-- cuarto ejercicio -->
+
+	<h2>Vehiculos</h2>
+
+	<p id="placa"></p>
+	<p id="marca"></p>
+	<p id="modelo"></p>
+
+	<h2>Vehiculo2</h2>
+
+	<p id="placa2"></p>
+	<p id="marca2"></p>
+	<p id="modelo2"></p>
+
+	<h2>Vehiculo3</h2>
+
+	<p id="placa3"></p>
+	<p id="marca3"></p>
+	<p id="modelo3"></p>
+
+
+	<script>
+
+	/*  ****************************************************************  */
+
+	// <!-- Primer ejercicio -->
+
+		//1. Lista de pares de valores propiedad/valor
+		var articulo1 = {
+			codigo : "0001",
+			nombre : "chaqueta",
+			precio : 30000
+		}
+
+		//2. Usando la palabra reservada new
+		var articulo2 =  new Object();
+		articulo2.codigo = "0015";
+		articulo2.nombre = "jeans";
+		articulo2.precio = 15000;
+
+		//3. Usando una funcion constructor: con la palabra reservada - this -
+		function articulo3(codigo, nombre, precio){
+			this.codigo = codigo;
+			this.nombre = nombre;
+			this.precio = precio;
+		}
+			var articulo3 = new articulo3("0005", "zapatos", 10000);
+
+
+			//Accediendo a las propiedades de los objetos para mostrarla
+			document.getElementById("codigo").innerHTML = articulo1.codigo;
+			document.getElementById("nombre").innerHTML = articulo1.nombre;
+			document.getElementById("precio").innerHTML = articulo1.precio;
+
+			document.getElementById("codigo2").innerHTML = articulo2.codigo;
+			document.getElementById("nombre2").innerHTML = articulo2.nombre;
+			document.getElementById("precio2").innerHTML = articulo2.precio;
+
+			document.getElementById("codigo3").innerHTML = articulo3.codigo;
+			document.getElementById("nombre3").innerHTML = articulo3.nombre;
+			document.getElementById("precio3").innerHTML = articulo3.precio;
+
+	/*  ****************************************************************  */
+
+	// <!-- Segundo ejercicio -->
+
+		//1. Lista de pares de valores propiedad/valor
+		var estudiante1 = {
+			codigo: "001",
+			nombre: "Giovanny",
+			telefono: 3194884096
+		}
+
+		//2. Usando la palabra reservada new
+		var estudiante2 = new Object();
+		estudiante2.codigo = "002";
+		estudiante2.nombre = "Juliet";
+		estudiante2.telefono = 3052624694;
+
+		//3. Usando una funcion constructor: con la palabra reservada - this -
+
+		function estudiante3(codigo, nombre, telefono){
+			this.codigo = codigo;
+			this.nombre = nombre;
+			this.telefono = telefono;
+		}
+			var estudiante3 = new estudiante3("003", "sara", 7036371);
+
+
+		//Accediendo a las propiedades de los objetos para mostrarla
+			document.getElementById("codigoEstudiante").innerHTML = estudiante1.codigo;
+			document.getElementById("nombreEstudiante").innerHTML = estudiante1.nombre;
+			document.getElementById("telefonoEstudiante").innerHTML = estudiante1.telefono;
+
+			document.getElementById("codigoEstudiante2").innerHTML = estudiante2.codigo;
+			document.getElementById("nombreEstudiante2").innerHTML = estudiante2.nombre;
+			document.getElementById("telefonoEstudiante2").innerHTML = estudiante2.telefono;
+
+			document.getElementById("codigoEstudiante3").innerHTML = estudiante3.codigo;
+			document.getElementById("nombreEstudiante3").innerHTML = estudiante3.nombre;
+			document.getElementById("telefonoEstudiante3").innerHTML = estudiante3.telefono;
+	
+	/*  ****************************************************************  */
+	
+	// <!-- tercer ejercicio -->
+
+		//1. Lista de pares de valores propiedad/valor
+		var persona1 = {
+			idd: "001",
+			nombre: "Manuel",
+			edad: 25
+		}
+
+		//2. Usando la palabra reservada new
+		var persona2 = new Object();
+		persona2.idd = "005";
+		persona2.nombre = "Maria";
+		persona2.edad = 30;
+
+		//3. Usando una funcion constructor: con la palabra reservada - this -
+		function persona3(idd, nombre, edad){
+			this.idd = idd;
+			this.nombre = nombre;
+			this.edad = edad;
+		}
+			var persona3 = new persona3("004", "Jose", 25);
+
+		//Accediendo a las propiedades de los objetos para mostrarla
+			document.getElementById("id").innerHTML = persona1.idd;
+			document.getElementById("nombre-persona").innerHTML = persona1.nombre;
+			document.getElementById("edad").innerHTML = persona1.edad;
+
+			document.getElementById("id2").innerHTML = persona2.idd;
+			document.getElementById("nombre-persona2").innerHTML = persona2.nombre;
+			document.getElementById("edad2").innerHTML = persona2.edad;
+
+			document.getElementById("id3").innerHTML = persona3.idd;
+			document.getElementById("nombre-persona3").innerHTML = persona3.nombre;
+			document.getElementById("edad3").innerHTML = persona3.edad;
+
+	/*  ****************************************************************  */
+	// <!-- cuarto ejercicio -->
+
+		//1. Lista de pares de valores propiedad/valor
+		var vehiculo = {
+			placa: "jyr67d",
+			marca: "Yamaha",
+			modelo: 2014
+		}
+
+		//2. Usando la palabra reservada new
+		var vehiculo2 = new Object();
+		vehiculo2.placa = "jrd37d";
+		vehiculo2.marca = "bmw";
+		vehiculo2.modelo = 2015;
+
+		//3. Usando una funcion constructor: con la palabra reservada - this -
+		function vehiculo3(placa, marca, modelo){
+			this.placa = placa;
+			this.marca = marca;
+			this.modelo = modelo;
+		}
+			var vehiculo3 = new vehiculo3("rgb000", "nissan", 2015);
+
+			//Accediendo a las propiedades de los objetos para mostrarla
+			document.getElementById("placa").innerHTML = vehiculo.placa;
+			document.getElementById("marca").innerHTML = vehiculo.marca;
+			document.getElementById("modelo").innerHTML = vehiculo.modelo;
+
+			document.getElementById("placa2").innerHTML = vehiculo2.placa;
+			document.getElementById("marca2").innerHTML = vehiculo2.marca;
+			document.getElementById("modelo2").innerHTML = vehiculo2.modelo;
+
+			document.getElementById("placa3").innerHTML = vehiculo3.placa;
+			document.getElementById("marca3").innerHTML = vehiculo3.marca;
+			document.getElementById("modelo3").innerHTML = vehiculo3.modelo;
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+

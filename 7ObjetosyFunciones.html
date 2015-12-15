@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos y Funciones</title>
+</head>
+<body>
+	
+
+	<script>
+
+	/* OBJETOS */
+		//Existen tres formas para crear un Objeto:
+
+		//1. Lista de pares de valores propiedad/valor
+		var producto1 = {
+			codigo:"0001", 
+			nombre:"Gorra", 
+			precio:5000
+		}
+
+		//2. Usando la palabra reservada new
+		var producto2 = new Object();
+		producto2.codigo = "005";
+		producto2.nombre = "camiseta";
+		producto2.precio = 7000;
+
+		//3. Usando una funcion constructor: con la palabra reservada - this -
+		function producto3(codigo, nombre, precio){
+			this.codigo = codigo; // Despues del igual se usa los nombres del parametro
+			this.nombre = nombre;
+			this.precio = precio;
+		}
+		var producto3 = new producto3("001", "Gorra", 50);
+
+		//Accediendo a las propiedades de los objetos para mostrarla
+			document.getElementById("c1").innerHTML = producto1.codigo;
+			document.getElementById("n1").innerHTML = producto1.nombre;
+			document.getElementById("p1").innerHTML = producto1.precio;
+
+
+
+	/*	FUNCIONES */
+	/*
+	Son conjuntos de sentencias que ejecutan una actividad especifica
+	Se usa la palabra reservada - function -
+	Puede recibir o no parámetros
+	Las sentencias están agrupadas dentro de dos llaves {}
+	Para devolver un valor se utiliza la palabra reservada return
+	*/
+
+	//Existen tres formas para llamar una función:
+	//1.	Cuando hay un evento generado por el usuario
+	
+	//2.	Llamado desde el código, ejemplo:
+		division(10,2);
+		function división(p,q){
+			return p / q
+		}
+	//3.	Cuando se llama así misma, ejemplo
+		(function(){
+			alert(“Esta función se invoca así misma”);
+		})();
+
+	//Una función se puede asignar a una variable, ejemplo:
+		var z = function (x,y){return x - y};
+		var w = z(15,6);
+
+
+
+	</script>
+</body>
+</html>

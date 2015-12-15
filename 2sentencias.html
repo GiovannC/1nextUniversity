@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sentencias</title>
+</head>
+<body>
+	
+	<h1>Sentencias</h1>
+
+	<p id="resultado1"></p>
+	<p id="mensaje"></p>
+
+	<script>
+		/*    ----------------------------------------------    */
+		// -- 1. DECLARACIÓN DE OBJETOS Y VARIABLES
+		/*    ----------------------------------------------    */
+
+		//Sentencias
+		var u = 8 - 4;
+		var p = 3 * u;
+		document.getElementById("resultado1").innerHTML = "resultado: " + p;
+
+
+
+		/*    ----------------------------------------------    */
+		// -- 2. DECLARACIÓN DE FUNCIONES
+		/*    ----------------------------------------------    */
+
+		//Sentencias Agrupada en bloque a traves de una función
+		function miFuncion (argument){
+			var hola = "I love JavaScript";
+			document.getElementById("mensaje").innerHTML = hola;
+		}
+
+
+		/*    ----------------------------------------------    */
+		// 3. ASIGNACIÓN DE EVENTOS
+		/*    ----------------------------------------------    */
+
+		//Llamamos la funcion
+		miFuncion();
+
+
+	</script>
+
+</body>
+</html>

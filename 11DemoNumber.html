@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo Number</title>
+</head>
+<body>
+	
+	<h1>Number</h1>
+
+	<p id="n1"></p>
+	<p id="n2"></p>
+
+	<h2>Number Propiedades</h2>
+
+	<p id="n3"></p>
+	<p id="n4"></p>
+	<p id="n5"></p>
+	<p id="n6"></p>
+	<p id="n7"></p>
+	<p id="n8"></p>
+	<p id="n9"></p>
+
+	<h2>Number Metodos</h2>
+
+	<p id="n10"></p>
+	<p id="n11"></p>
+	<p id="n12"></p>
+	<p id="n13"></p>
+	<p id="n14"></p>
+
+	<br><br>
+
+	<p id="n15"></p>
+	<p id="n16"></p>
+	<p id="n17"></p>
+	<p id="n18"></p>
+
+
+
+	<script>
+
+		//Definición de Numbers.
+
+		var numero1 = 2500; //Numero sin decimales
+		var numero2 = 34.290; //Numero con decimales
+
+		document.getElementById("n1").innerHTML = numero1;
+		document.getElementById("n2").innerHTML = numero2;
+
+		
+
+		//Propiedades de Number.
+
+		var numero3 = 23434;
+		document.getElementById("n3").innerHTML = numero3.constructor; // contructor retorna la funcion nativa que crea un numero
+
+		document.getElementById("n4").innerHTML = Number.MAX_VALUE; //retorna el numero max. que se puede usar en Js.
+
+		document.getElementById("n5").innerHTML = Number.MIN_VALUE; //retorna el numero min. que se puede usar en Js.
+
+		document.getElementById("n6").innerHTML = Number.NEGATIVE_INFINITY; //retorna un negativo infinito
+
+		document.getElementById("n7").innerHTML = Number.NaN; //retorna un numero no definido
+
+		document.getElementById("n8").innerHTML = Number.POSITIVE_INFINITY; //retorna un positivo infinito
+
+
+		Number.prototype.metodoNumerico = function(){ // la propiedad prototype permite crear un nuevo metodo para manipular numeros
+			return this*4/2;
+		}
+		var numero4 = 25;
+		document.getElementById("n9").innerHTML = "Prototype: " + numero4.metodoNumerico();
+
+		
+
+		//Metodos de number
+
+		var numero5 = 26.57;
+		document.getElementById("n10").innerHTML = "toExponential: " + numero5.toExponential(); // Convierte un numero a expresion exponencial.
+
+		var numero6 = 14.7854243;
+		document.getElementById("n11").innerHTML = "toFixed: " + numero6.toFixed(3); // Recorta el numero de digitos y lo convierte en String.
+
+		var numero7 = 23.5567;
+		document.getElementById("n12").innerHTML =  "toPrecision: " +  numero7.toPrecision(2); // Da formato a un numero para una longitud de numeros n.
+
+		var numero8 = 3.1416;
+		document.getElementById("n13").innerHTML = "toString: " + numero8.toString(); // Convierte un numero a una cadena
+
+		var numero9 = 5000;
+		document.getElementById("n14").innerHTML = "valueOf: " + numero9.valueOf(); // Devuelve el valor simple de un número
+
+
+
+		Number.prototype.metodoSuma = function(){ 
+			return this+10;
+		}
+		var numero10 = 100;
+		document.getElementById("n15").innerHTML = "Prototype: " + numero10.metodoSuma();
+
+
+		Number.prototype.metodoResta = function(){
+			return this-20
+		}
+		var numero11 = 200;
+		document.getElementById("n16").innerHTML = "Prototype: " + numero11.metodoResta();
+
+
+		Number.prototype.metodoMultiplicacion = function(){
+			return this*5
+		}
+		var numero12 = 10;
+		document.getElementById("n17").innerHTML = "Prototype: " + numero12.metodoMultiplicacion();
+
+
+		Number.prototype.metodoDivision = function(){
+			return this/2
+		}
+		var numero12 = 500;
+		document.getElementById("n18").innerHTML = "Prototype: " + numero12.metodoDivision();
+
+
+
+	</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos Literas</title>
+</head>
+<body>
+
+	<h1>Literales Numéricos</h1>
+
+	<p id="numerico1"></p>
+	<p id="numerico2"></p>
+	<p id="numerico3"></p>
+
+	<h1>Literales de Cadena</h1>
+
+	<p id="cadena1"></p>
+	<p id="cadena2"></p>
+	<p id="cadena3"></p>
+
+	<h1>Literales de Expresión</h1>
+
+	<p id="expresion1"></p>
+	<p id="expresion2"></p>
+	<p id="expresion3"></p>
+
+	<h1>Literal de Función</h1>
+
+	<p id="funcion"></p>
+
+	<script>
+
+		document.getElementById("numerico1").innerHTML = 4343;
+		document.getElementById("numerico2").innerHTML = 23.4;
+		document.getElementById("numerico3").innerHTML = 555e2;
+
+		document.getElementById("cadena1").innerHTML = "Maria Perez";
+		document.getElementById("cadena2").innerHTML = 'Como estas?';
+		document.getElementById("cadena3").innerHTML = "Hola!";
+
+		document.getElementById("expresion1").innerHTML = 3 + 5;
+		document.getElementById("expresion2").innerHTML = 4 * 3;
+		document.getElementById("expresion3").innerHTML = 8 / 4 + 3;
+
+		function miFuncion(){
+			document.getElementById("funcion").innerHTML = "Mi funcion!!!";
+		}
+
+		// Se llama la funcion
+		miFuncion();
+
+	</script>
+
+</body>
+</html>

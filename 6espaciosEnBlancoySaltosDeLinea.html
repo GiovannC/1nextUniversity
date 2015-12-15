@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Espacion en blanco y saltos de linea</title>
+</head>
+<body>
+	
+	<h1>Espacios en blanco</h1>
+
+	<p id="color1"></p>
+	<p id="color2"></p>
+	
+	<h1>Saltos de línea</h1>
+
+	<div id="miDiv">
+		
+	</div>
+
+
+	<script>
+
+		//Espacios en blanco
+
+		var color1 = "rojo";
+		var color2 =    "color2";
+
+		document.getElementById("color1").innerHTML = color1;
+		document.getElementById("color2").innerHTML = color2;
+
+		//Saltos de linea
+
+
+		document.getElementById("miDiv").innerHTML = "Hola soy un div" + " con contenido dinamico";
+
+
+
+	</script>
+
+</body>
+</html>
