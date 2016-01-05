@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrays</title>
+</head>
+<body>
+
+	<h1>Arrays</h1>
+
+	<p id="a1"></p>
+	<p id="a2"></p>
+
+	<br>
+
+	<h1>Arrays operacionales</h1>
+
+	<p id="a3"></p>
+	<p id="a4"></p>
+	<p id="a5"></p>
+	<p id="a6"></p>
+	<p id="a7"></p>
+	<p id="a8"></p>
+
+	
+	<script>
+
+		// Arrays definición
+
+		var futbol = ["Balón", " Jugadores", " Cancha"];
+		var animales = new Array(" Oso", " Aguila", " Ballena"); 
+
+
+		document.getElementById("a1").innerHTML = futbol;
+		document.getElementById("a2").innerHTML = animales;
+
+		//Reemplazando el valor de un arreglo
+		futbol[1] = " Arbitros";
+		document.getElementById("a3").innerHTML = futbol;
+
+		//Longitud del arreglo
+		document.getElementById("a4").innerHTML = futbol.length;
+
+		//Almacenar un valor en la ultima posición del arreglo
+		futbol[futbol.length]=" Hinchada";
+		document.getElementById("a5").innerHTML = futbol;
+
+		//Invertir el orden de los elementos
+		futbol.reverse();
+		document.getElementById("a6").innerHTML = futbol;
+
+		// Ordenar los elementos
+		animales.sort();
+		document.getElementById("a7").innerHTML = animales;
+
+		//Concatenar
+		var arrayConca =  animales.concat(futbol); 
+		document.getElementById("a8").innerHTML = arrayConca;	
+		//O directamente:
+		//document.getElementById("a8").innerHTML = animales.concat(futbol); 	
+
+
+
+	</script>
+</body>
+</html>
